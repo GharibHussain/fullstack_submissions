@@ -6,11 +6,13 @@ const Part = ({ part }) => {
     )
 }
 
+// parts of a course
 const Content = ({ course }) => {
+    let parts = course.parts
     return (
       <div>
         <ul>
-          {course.parts.map(part =>
+          {parts.map(part =>
             <Part key={part.id} part={part} />
             )}
         </ul>
