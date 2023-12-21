@@ -6,11 +6,7 @@ const Part = ({ part }) => {
     )
 }
 
-
-
-
 const Content = ({ course }) => {
-
     return (
       <div>
         <ul>
