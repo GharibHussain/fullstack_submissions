@@ -6,11 +6,9 @@ const Header = ({ course }) => {
         <h1>{course.name}</h1>  
       </div>
       )
-  }
-  
-  
-  
-  const Total = ({ course }) => {
+}
+   
+const Total = ({ course }) => {
     //const totalNumOfEx = course.parts[0].exercises + course.parts[1].exercises + course.parts[2].exercises 
     // Instead, we use the following 'reduce' funcrion to calculate the sum of exercises regardless of number of parts
     const totalNumOfEx = course.parts.reduce((totalNumOfExercises, currentExercise) => totalNumOfExercises + currentExercise.exercises, 0);
@@ -22,10 +20,7 @@ const Header = ({ course }) => {
     )
 }
   
- 
-
 const Course = ({ course }) => {
-
   return(
     <div>
       <Header course={course}/>
@@ -33,7 +28,6 @@ const Course = ({ course }) => {
       <Total course={course}/>
     </div>
   )
-
 }
 
 export default Course
